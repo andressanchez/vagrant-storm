@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
 			config2.vm.box_url = "http://files.vagrantup.com/precise64.box"
 			config2.vm.provider :virtualbox do |v|
 				v.customize ["modifyvm", :id, "--memory", 1024]
-				v.customize ["modifyvm", :id, "--cpus", 1]
+				v.customize ["modifyvm", :id, "--cpus", 2]
 				v.customize ["modifyvm", :id, "--ioapic", "on"]
 			end
 			config2.vm.host_name = nimbus_vm['name']
@@ -97,7 +97,7 @@ Vagrant.configure("2") do |config|
 			config2.vm.box_url = "http://files.vagrantup.com/precise64.box"
 			config2.vm.provider :virtualbox do |v|
 				v.customize ["modifyvm", :id, "--memory", 1024]
-				v.customize ["modifyvm", :id, "--cpus", 1]
+				v.customize ["modifyvm", :id, "--cpus", 2]
 				v.customize ["modifyvm", :id, "--ioapic", "on"]
 			end
 			config2.vm.host_name = supervisors_vm['name']
